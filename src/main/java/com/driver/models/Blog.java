@@ -1,6 +1,7 @@
 package com.driver.models;
 
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Blog {
     private int id;
     private String title;
     private String content;
+    @CreatedDate
     private Date pubDate;
 
     @ManyToOne
